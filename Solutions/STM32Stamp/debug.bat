@@ -3,8 +3,9 @@
 set x_flavor=debug
 set x_memory=flash
 set x_root=..\..\
-set msbuild=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild
-set MDK_VER=5.22
+rem set msbuild=C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild
+set msbuild=msbuild
+set MDK_VER=5.05
 set MDKPORT=MDK%MDK_VER%
 set MDK_TOOL_PATH=D:\Keil_v5\ARM
 
@@ -14,9 +15,9 @@ for %%i in ("%cd%") do set x_name=%%~ni
 
 title 编译MF方案[%x_name%][%x_flavor%][%x_memory%]
 
-pushd %x_root%
-call setenv_MDK.cmd %MDK_VER% %MDK_TOOL_PATH%
-popd
+rem pushd %x_root%
+rem call setenv_MDK.cmd %MDK_VER% %MDK_TOOL_PATH%
+rem popd
 
 :: 准备Feedback，避免编译警告
 set feedback=%CLRROOT%\tools\make\Feedback\%x_name%_%COMPILER_TOOL_VERSION%.feedback

@@ -61,8 +61,8 @@
   <ItemGroup>
     <HFiles Include="..\stm32f10x.h" />
     <Compile Include="STM32_bootstrap.cpp" />
-    
-    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\Cores\arm\Processors\ARM9\Bootstrap\dotnetmf.proj" />
+    <Compile Include="$(AS_SUBDIR)\VectorTable.s" />
+    <Compile Include="$(AS_SUBDIR)\DefaultHandlers.s" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />

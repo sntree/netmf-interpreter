@@ -44,7 +44,7 @@
 
         <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
 
-            <FileMapping Name="FirstEntry.obj"    Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+            <FileMapping Name="*" Options="(SectionForPowerOnReset, +FIRST)" /> <!-- the entry pointer section goes into this region -->
             <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
             <FileMapping Name="*" Options="(+RO-CODE)" />
             <FileMapping Name="*" Options="(+RO-DATA)" />
